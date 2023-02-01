@@ -1,0 +1,121 @@
+vue <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 3 | Programacion</title>
+</head>
+<body>
+    <div id="app">
+        {{title}}
+        <p>{{ name }}</p>
+        <br>
+        Cambirar nombre
+        <!-- v-on es igual a @ -->
+        <input type="text" v-model="newName" @:input="changeName()">
+        <button type="button" v-on:click ="changeName()"> Cambiar </button>
+
+    </div>
+    <!-- Para instalar vue desde la terminar  -->
+    <!-- npm -->
+    <!-- npm install -g vue -->
+    <!-- npm install -g @vue/cli -->
+    <!-- vue create firstapp -->
+    <!-- Y -->
+    <!-- Maul -->
+    <!-- Router -->
+    <!-- ESLint + Prettier -->
+
+    <!-- en la terminal -->
+    <!-- npm run serve -->
+
+
+    <!-- Limpiar Cache -->
+
+    <!-- 
+    npm unintall -g vue 
+    npm unintall -g vue-cli 
+
+    npm cache clean --firce 
+
+    npm install -g vue 
+    npm install -g @vue/cli -->
+
+    <!-- para crear una nueva ruta  en la apliacion -->
+
+    <!-- 
+    crear una nuevo componente en components 
+    exanpmo -->
+
+    <!-- template
+    h1 h1
+    template
+    
+    
+
+     
+    <script >
+        expor
+    </script>
+
+
+    agregamos una vie en la carpeta view 
+
+    template
+    example-componenet tittle = Programacion IV 
+    template
+
+    <script >
+        import example from '@/components/exampleComponenre'
+
+        export default : 'example'
+        comnnetr : {
+            exampleconmet,
+
+        }
+    </script>
+
+
+    para crear una ruta 
+
+    {
+        path: "7example", 
+        name: "example",
+
+        component  : () => 
+        import ("../views/exampleView.vue")
+    }
+
+
+    agregamos el enlace en App.vue 
+    templa
+
+
+    
+        
+    -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+
+
+        const app = Vue.createApp ({
+            data (){
+                return{
+                    title: 'Programacion Computacional ',
+                    name: 'Kevin Alxander ',
+                    newName : '',
+                }
+            },
+            methods:{
+                changeName(){
+                    this.name = this.newName
+
+                }
+            }
+        }).mount('#app')
+
+    </script>
+</body>
+</html>
